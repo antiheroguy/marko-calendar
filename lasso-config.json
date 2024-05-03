@@ -1,0 +1,16 @@
+{
+	"outputDir": "static",
+	"urlPrefix": "./static",
+	"minify": false,
+	"bundlingEnabled": false,
+	"fingerprintsEnabled": false,
+	"plugins": ["lasso-marko"],
+	"require": {
+		"dependencies": [
+			{
+				"type": "js",
+				"path": "node_modules/dayjs/dayjs.min.js"
+			}
+		]
+	}
+}

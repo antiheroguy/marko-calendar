@@ -1,0 +1,8 @@
+{
+	"dependencies": [
+		{
+			"type": "js",
+			"url": "https://www.informatik.uni-leipzig.de/~duc/amlich/JavaScript/amlich-hnd.js"
+		}
+	]
+}

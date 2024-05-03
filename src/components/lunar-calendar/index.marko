@@ -1,0 +1,32 @@
+<h1>${state.time}</h1>
+
+<div id="calendar"/>
+
+style {
+	h1 {
+		text-align: center;
+	}
+}
+
+class {
+	onCreate(input) {
+		this.state = {
+			time: input.dayjs().format('HH:mm:ss'),
+			interval: null
+		}
+
+		this.state.interval = setInterval(() => {
+			this.state.time = input.dayjs().format('HH:mm:ss')
+		}, 1000)
+	}
+
+	onDestroy() {
+		if (this.state.interval) {
+			clearInterval(this.state.interval)
+		}
+	}
+
+	onMount() {
+		document.querySelector('#calendar').innerHTML = printSelectedYear()
+	}
+}
